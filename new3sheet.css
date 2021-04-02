@@ -1,0 +1,21 @@
+
+fieldset {
+    margin: 300px auto;
+    margin-top: 0px;
+    width: 280px;
+    padding: 0;
+    font-size:1px;
+    font-style:bold;
+    text-align: center;
+}
+
+button {
+    float: center;
+    font-size: 14.5px;
+}
+
+.two {
+    margin-left: 1120px;
+    margin-top: 460px;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeadLine</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sanitize.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <h1>DeadLine</h1>
+        </header>
+    </section>
+    
+    <section class="one">
+        <div class="id">
+            <p>Check your name : <input type="text"></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button name="save">save</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button name="load">load</button></p>
+            <p></p>
+        </div>
+
+        <div class="language">
+            <p>Language setting : <input type="search"></p>
+            <p><button name="save">save</button>
+        </div>
+    </section>
+
+    <section class="two">
+        
+        Your Work's 
+
+        <div class="timelimit">
+            <p>Time Limit : <input type="text" id=dt size="1px">D<input type="text" id=ht size="1px">H
+                <input type="text" id=mt size="1px">M<input type="text" id=st size="1px">S
+            <button id="start">Start</button> <button>Stop</button></p>
+            <p id="data">sad</p>
+            
+        </div>
+
+        <p>jobs</p>
+
+        <div class="job1">
+            <p><input type="text" size="80px"></p>
+        </div>
+
+        <div class="job2">
+            <p><input type="text" size="80px"></p>
+        </div>
+
+        <div class="job3">
+            <p><input type="text" size="80px"></p>
+        </div>
+
+
+    </section>
+
+    <section class="three">
+        
+        <p>Day Setting : <input type="number"></p>
+        
+        <div class="graph">
+            <p>graph</p>
+        </div>
+
+    </section>
+
+    <script>
+        var inputdate ;
+        document.getElementById('start').addEventListener('click',function(){
+            inputdate = document.getElementById('dt').value+document.getElementById('ht').value
+            +document.getElementById('mt').value+document.getElementById('st').value+'000';
+
+            var clicktime = new Date();
+            var nowtime;
+            setInterval(function(){
+                nowtime = new Date();
+                var timevelocity = nowtime - clicktime;
+                document.getElementById('data').innerHTML = inputdate-timevelocity;
+            },10);
+
+        })
+
+    </script>
+</body>
+</html>

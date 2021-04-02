@@ -1,0 +1,71 @@
+header {
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 24px;
+    border-bottom: 5px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.id {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    border: 1px solid rgb(232, 160, 235);
+    width: 450px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+
+.language {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    border: 1px solid rgb(232, 160, 235);
+    width: 450px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.two {
+    margin-top: -300px;
+    margin-left: 537px;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.timelimit {
+    color: red;
+    border: 3px solid red;
+    margin-top: 50px;
+    width: 760px;
+    padding: 0 40px;
+}
+
+.three {
+    margin-left: 1400px;
+    margin-top: -950px;
+    font-size: 30px;
+}
+
+.graph {
+    border: 2px solid white;
+    margin-right: 30px;
+    margin-top: 50px;
+    padding-top: 300px;
+    padding-left: 170px;
+    padding-bottom: 300px;
+}

@@ -1,0 +1,11 @@
+body {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.time {
+    font-style: normal;
+    font-size: 80px;
+    color: blue;
+}

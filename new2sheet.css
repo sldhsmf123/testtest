@@ -1,0 +1,12 @@
+
+.Timer {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+fieldset {
+    margin: 1px 1px;
+    padding: 0px;
+    width: 20%;
+}

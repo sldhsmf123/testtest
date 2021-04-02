@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW2</title>
+
+    <link rel="stylesheet" href="new2sheet.css">
+
+</head>
+<body>
+    <header>
+    </header>
+
+    <section class="Timer">
+        <div>
+            <fieldset>
+                <p id="timer">00</p>
+                <p><button id="plus">+</button>   <button id="minus">-</button></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="start">start</button>
+                <button id="stop">stop</button></p>
+
+            </fieldset>
+            
+        </div>
+    </section>
+<script>
+var clicktime;
+var timevelocity;
+var ss = 0;
+var timer_s;
+var stopp = 0;
+
+document.getElementById('plus').addEventListener('click',function(){
+    if(ss<59)
+    {
+        if(ss<9)
+        {
+            ss++;
+            document.getElementById('timer').innerHTML = '0'+ss;
+        }
+        else
+        {
+            ss++;
+            document.getElementById('timer').innerHTML = ss;
+        }
+    }
+    else
+    {
+        ss = 0;
+        document.getElementById('timer').innerHTML = '0'+ss;
+    }
+    
+
+})
+document.getElementById('minus').addEventListener('click',function(){
+    if(ss==0)
+    {
+        ss=59;
+        document.getElementById('timer').innerHTML = ss;
+    }
+    else if(ss<11)
+    {
+        ss--;
+        document.getElementById('timer').innerHTML = '0'+ss;
+    }
+    else
+    {
+        ss--;
+        document.getElementById('timer').innerHTML = ss;
+    }
+})
+document.getElementById('start').addEventListener('click',function(){
+    
+        clicktime = new Date()
+        timer_s = setInterval(function(){
+            var realtime = new Date();
+            svelocity = ss - (realtime.getSeconds() - clicktime.getSeconds());
+            document.getElementById('timer').innerHTML = svelocity;
+            if(svelocity <= 0)
+                {
+                    svelocity = 0;
+                    document.getElementById('timer').innerHTML = '00';
+                }
+            else if(svelocity < 10)
+            {
+                document.getElementById('timer').innerHTML = '0'+svelocity;
+            }
+            else if(svelocity >9)
+            {
+                document.getElementById('timer').innerHTML = svelocity;
+            }
+            document.getElementById('stop').addEventListener('click',function(){
+            clearInterval(timer_s);
+            })
+        },10);
+        
+    }
+
+
+)
+
+</script>
+</body>
+</html>

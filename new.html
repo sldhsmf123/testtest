@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="newsheet.css">
+    
+</head>
+<body>
+
+    <p> What time is now ? </p>
+        <button id="onclickbutton">START</button><button id="onclickstopbutton">STOP</button>
+        <div class="time" id="timer">
+            00 : 00 : 00
+        </div>
+        
+    <p> <button id="plustime">PlusTime </button></p>
+    <p> <button id="minustime">minustime</button></p>
+    <p> <button id="viewtime">viewtime</button></p>
+
+    <p id="settime"> 0 </p>
+    
+
+    <p> </p>
+    
+    <script>
+    
+    document.getElementById('onclickbutton').addEventListener('click',function(){setInterval(startingtimer,10);})
+    document.getElementById('viewtime').addEventListener('click',function(){
+        document.getElementById('settime').innerHTML = DDD;
+    })
+    document.getElementById('plustime').addEventListener('click',function(){
+        DDD++;
+    })
+    document.getElementById('minustime').addEventListener('click',function(){
+        DDD--;
+    })
+
+    var DDD = 0;
+
+
+    var startingtimer = function() {
+        var timenow = new Date();
+        var seconds = timenow.getSeconds();
+        var minutes = timenow.getMinutes();
+        var hours = timenow.getHours();
+
+        var zeroplus = function(x){
+            if(x < 10)
+            {
+                x = '0'+ x;
+            }
+            return x;
+        }
+
+        seconds = zeroplus(seconds);
+        minutes = zeroplus(minutes);
+        hours = zeroplus(hours);
+
+        document.getElementById('timer').innerHTML = hours+':'+minutes+':'+seconds;
+    }
+
+    document.getElementById('onclickstopbutton').addEventListener('click',function(){
+        document.getElementById('timer').innerHTML = "It's Stopped now";
+    })
+    
+    </script>
+
+
+</body>
+</html>
